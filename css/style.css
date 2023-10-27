@@ -7,7 +7,7 @@ body {
 
 /* Estilo para o cabeçalho (título) */
 header {
-background-color: #f02121; /*Cor de fundo do titulo*/
+background-color: #f02121; 
 color: #fff; /*Cor das letras da format*/
 text-align: center;
 padding: 20px;
