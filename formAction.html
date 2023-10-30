@@ -27,9 +27,9 @@
         <p>Sua reserva de convites foi recebida com sucesso. Abaixo estão os detalhes da sua reserva:</p>
 
         <ul>
-            <li><strong>Nome:</strong> [Nome do usuário]</li>
-            <li><strong>E-mail:</strong> [E-mail do usuário]</li>
-            <li><strong>Quantidade de Convites:</strong> [Quantidade reservada]</li>
+            <li><strong>Nome:</strong> <span id="nome"></span></li>
+            <li><strong>E-mail:</strong> <span id="email"></span></li>
+            <li><strong>Quantidade de Convites:</strong> <span id="quantidade"></span></li>
         </ul>
     </main>
 
@@ -37,6 +37,24 @@
     <footer>
         &copy; 2023 Todos os direitos reservados
     </footer>
+
+    <script>
+        // Função para extrair parâmetros da URL
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, '\\$&');
+            var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+                results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, ' '));
+        }
+
+        // Extrair os parâmetros da URL e exibir na página
+        document.getElementById("nome").textContent = getParameterByName("nome");
+        document.getElementById("email").textContent = getParameterByName("email");
+        document.getElementById("quantidade").textContent = getParameterByName("quantidade");
+    </script>
     
 </body>
 </html>
