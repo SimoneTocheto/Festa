@@ -5,19 +5,27 @@ body {
   padding: 0;
 }
 
-/* Estilo para o cabeçalho (título) */
-header {
-background-color: #f02121; 
-color: #fff; /*Cor das letras da format*/
-text-align: center;
-padding: 20px;
+ /* Estilo para o cabeçalho (título) */
+ header {
+  background-color: #ffffff;
+  color:  rgb(129, 17, 17); /* Cor das letras da formatação */
+  text-align: center;
+  padding: 20px;
+  display: flex; /* Usando flexbox para alinhar os elementos na mesma linha */
+  align-items: center; /* Alinha verticalmente no centro */
 }
 
 /* Estilo para o título da página */
 h1 {
-font-size: 36px;
-margin: 0;
-padding: 0;
+  font-size: 36px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estilo para a imagem */
+.logo {
+  width: 50px; /* Define o tamanho desejado para a imagem */
+  margin-right: 10px; /* Espaçamento à direita para separar a imagem do texto */
 }
 
 /* Estilo para o conteúdo principal */
